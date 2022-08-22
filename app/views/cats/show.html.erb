@@ -1,8 +1,10 @@
-<h2><%= @cat.name %></h2>
+<h1><%= @cat.name %></h1>
 <p><%= @cat.age %></p>
 <p><%= @cat.description %></p>
 
-<%= link_to "Delete",
-  cat_path(@cat),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
+  <%= link_to "Edit #{@cat.name}", edit_cat_path(@cat) %>
+  <br>
+  <%= link_to "Delete #{@cat.name}", cat_path(@cat), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
+  <br>
+  <%= link_to "Back to all cats", cats_path %>
+</div>
