@@ -1,2 +1,14 @@
 <h1>Cats#show</h1>
 <p>Find me in app/views/cats/show.html.erb</p>
+
+<h1><%= @cat.name %>, <%= @cat.age %></h1>
+<%= image_tag "", class: "cat-picture" %>
+<p><%= @cat.description %></p>
+
+
+  <%= link_to "Edit #{@cat.name}", edit_cat_path(@cat) %>
+  <br>
+  <%= link_to "Delete #{@cat.name}", cat_path(@cat), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
+  <br>
+  <%= link_to "Back to all cats", cats_path %>
+</div>
