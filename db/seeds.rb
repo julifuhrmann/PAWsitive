@@ -5,3 +5,33 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+puts "reset db..."
+Cat.destroy_all
+User.destroy_all
+
+puts "Create 50 users..."
+
+50.times do
+  user = User.new(
+    email: Faker::Internet.email,
+    password: Faker::Internet.password
+  )
+  user.save!
+  puts "Creating #{User.count} - #{User.name}"
+end
+
+puts "Create 100 cat entries..."
+
+100.times do
+  cat = Cat.new(
+    name: Faker::Creature::Cat.name,
+    age: rand(1..20),
+    description: Faker::Creature::Cat.breed,
+    user: User.all.sample
+  )
+  cat.save
+  puts "Creating #{cat.id} - #{cat.name}"
+end
+
+puts "Finished!"
