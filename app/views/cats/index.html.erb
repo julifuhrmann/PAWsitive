@@ -1,15 +1,28 @@
-<h1>Cats#index</h1>
 
-<div class="cover mb-4 d-flex align-items-center justify-content-center">
+<%# ---Banner start--- %>
+<div class="banner"
+  style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                            url('assets/kittens.jpg');">
+  <div class="container">
+    <h1>PAWsitive <strong>Cats</strong> for <strong>Cat Lovers</strong>!</h1>
+    <p>Meet new cats and change your life.</p>
+    <a class="btn btn-flat  " href="/cats">rent now</a>
+  </div>
+</div>
+<%# ---banner end--- %>
+
+
+<%# <div class="cover mb-4 d-flex align-items-center justify-content-center">
   <div class="text-center text-white">
     <h1>Rent a beautiful Cat!</h1>
     <h3 class="typed-js" data-controller="typed-js"></h3>
   </div>
-</div>
+</div> %>
+
 <div class="container py-5">
   <div class="d-flex align-items-center justify-content-between mb-3">
-    <h3 class="mb-0">List of Cats</h3>
-    <%= link_to "Create a cat list", new_cat_path, class: "btn btn-flat" %>
+    <h3 class="mb-0">Our Cats</h3>
+    <%= link_to "Add a new cat", new_cat_path, class: "btn btn-success" %>
   </div>
   <div class="row">
     <% @cats.each do |cat| %>
