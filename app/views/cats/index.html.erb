@@ -29,12 +29,11 @@
       <div class="co-12 col-sm-6 col-md-4 mb-3">
         <%= link_to cat_path(cat), class:"text-decoration-none" do %>
           <div class="card-category" data-aos="zoom-in">
-            <%= cat.name %>
+            <%= cl_image_tag cat.photo.key, height: 300, width: 400, crop: :fill %>
+            <p class="text-center" ><%= cat.name %></p>
           </div>
         <% end %>
       </div>
     <% end %>
   </div>
 </div>
-<%= cl_image_tag("rouywin8bjrcln0b1bd9",
-      width: 400, height: 300, crop: :fill) %>
