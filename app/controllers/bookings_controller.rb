@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def new
     @booking = Booking.new
+    @cat = Cat.find(params[:id])
   end
 
   def create
