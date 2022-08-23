@@ -1,5 +1,5 @@
-<h1><%= @cat.name %></h1>
-<p><%= @cat.age %></p>
+<h1>Name: <%= @cat.name %></h1>
+<h2>Age: <%= @cat.age %></h2>
 <p><%= @cat.description %></p>
 
   <%= link_to "Edit #{@cat.name}", edit_cat_path(@cat) %>
@@ -10,3 +10,4 @@
 </div>
 
 <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+

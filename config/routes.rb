@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root to: "cats#index"
-  resources :cats
+  resources :cats do
+    resources :bookings, only: [:new, :create]
+  end
   devise_for :users
 end
