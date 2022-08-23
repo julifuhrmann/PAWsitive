@@ -10,27 +10,33 @@ puts "reset db..."
 Cat.destroy_all
 User.destroy_all
 
-puts "Create 50 users..."
+puts "Create 30 users..."
 
-50.times do
+puts "finished!"
+
+30.times do
   user = User.new(
     email: Faker::Internet.email,
     password: Faker::Internet.password
   )
   user.save!
-  puts "Creating #{User.count} - #{User.name}"
+  puts "Creating #{User.count} - #{user.email}"
 end
 
-puts "Create 100 cat entries..."
-
-10.times do
+puts "Create 44 cat entries..."
+i = 0
+44.times do
   cat = Cat.new(
     name: Faker::Creature::Cat.name,
     age: rand(1..20),
     description: Faker::Creature::Cat.breed,
     user: User.all.sample
   )
-  cat.save
+  cat.photo.attach(io: URI.open(Cloudinary::Search.expression('folder=cats').execute["resources"][i]["url"]),
+                    filename: Cloudinary::Search.expression('folder=cats').execute["resources"][i]["filename"],
+                    content_type: "image/#{Cloudinary::Search.expression('folder=cats').execute["resources"][i]["format"]}")
+  i += 1
+  cat.save!
   puts "Creating #{cat.id} - #{cat.name}"
 end
 
