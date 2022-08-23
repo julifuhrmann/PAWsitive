@@ -1,14 +1,16 @@
 
 <%# ---Banner start--- %>
-<div class="banner"
+<%# <div class="banner"
   style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                            url('assets/kittens.jpg');">
-  <div class="container">
-    <h1>PAWsitive <strong>Cats</strong> for <strong>Cat Lovers</strong>!</h1>
-    <p>Meet new cats and change your life.</p>
-    <a class="btn btn-flat  " href="/cats">rent now</a>
+                            url('assets/kittens.jpg');"> %>
+  <div class="banner">
+    <div class="container">
+      <h1>PAWsitive</h1>
+      <p>Change your life. Rent a cat today.</p>
+      <br>
+      <a class="btn-apply" href="#">Book right meow!</a>
+    </div>
   </div>
-</div>
 <%# ---banner end--- %>
 
 
@@ -19,7 +21,7 @@
   </div>
 </div> %>
 
-<div class="container py-5">
+<div class="container">
   <div class="d-flex align-items-center justify-content-between mb-3">
     <h3 class="mb-0">Our Cats</h3>
     <%= link_to "Add a new cat", new_cat_path, class: "btn btn-success" %>
