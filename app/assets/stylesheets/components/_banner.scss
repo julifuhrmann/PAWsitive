@@ -1,9 +1,10 @@
 .banner {
-  background-image: url("photo-1511044568932-338cba0ad803.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photo-1511044568932-338cba0ad803.jpg");
   background-size: cover;
   background-position: center;
   padding: 200px 0;
   margin-top: -15px;
+  margin-bottom: 20px;
 }
 
 .banner h1, p {

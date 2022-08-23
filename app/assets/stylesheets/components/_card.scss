@@ -6,7 +6,7 @@
 }
 
 .card {
-  width: 200px;
+  width: 245px;
   border-radius: 4px;
   box-shadow: 1px 1px 3px rgba(10,10,10,.4);
   text-align: center;
@@ -17,6 +17,9 @@
 .card img {
   height: 135px;
   width: 200px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 }
 
 .card p {
