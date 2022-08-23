@@ -8,6 +8,5 @@
   <br>
   <%= link_to "Back to all cats", cats_path %>
 </div>
-
-<%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
-
+<% if @cat.photo.attached? %>
+<%= cl_image_tag @cat.photo.key, height: 300, width: 400, crop: :fill %>
