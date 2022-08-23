@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  
-  root to: "pages#home"
-  devise_for :users
+
+  root to: "cats#index"
   resources :cats
+  devise_for :users
 end
