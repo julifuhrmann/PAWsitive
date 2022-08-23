@@ -1,13 +1,15 @@
 class BookingsController < ApplicationController
   def new
     @booking = Booking.new
-    @cat = Cat.find(params[:id])
+    @cat = Cat.find(params[:cat_id])
   end
 
   def create
     @booking = Booking.new(booking_params)
+    @cat = Cat.find(params[:cat_id])
+    @booking.cat = @cat
     @booking.save
-    redirect_to booking_path(@booking)
+    redirect_to cat_path(@cat)
   end
 
   def update
