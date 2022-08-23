@@ -23,7 +23,7 @@ end
 
 puts "Create 100 cat entries..."
 
-100.times do
+10.times do
   cat = Cat.new(
     name: Faker::Creature::Cat.name,
     age: rand(1..20),
