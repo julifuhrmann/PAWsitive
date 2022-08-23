@@ -1,4 +1,5 @@
 <%= form_with model: cat do |f| %>
+  <%= f.input :photo, as: :file %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :age %>
