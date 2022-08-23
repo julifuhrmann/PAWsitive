@@ -1,33 +1,63 @@
 .banner {
+  background-image: url("photo-1511044568932-338cba0ad803.jpg");
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 200px 0;
+  margin-top: -15px;
 }
 
-.banner h1 {
-  margin: 0;
+.banner h1, p {
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
+  text-shadow:  1px 1px 1px, rgba(10,10,10,.4);
 }
 
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+.container {
+  width: 900px;
+  margin: auto;
 }
 
-.btn-flat {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: #670BFF;
-  transition: background 0.3s ease;
+.container h2 {
+  text-align: center;
 }
 
-.btn-flat:hover {
-  background: #4D04C4;
+// .cards {
+//   display: flex;
+//   justify-content: space-between;
+//   margin-bottom: 30px;
+// }
+
+// .card {
+//   width: 200px;
+//   border-radius: 4px;
+//   box-shadow: 1px 1px 3px rgba(10,10,10,.4);
+//   text-align: center;
+//   padding: 20px;
+//   border: 1px solid white;
+// }
+
+// .card img {
+//   height: 135px;
+//   width: 200px;
+// }
+
+// .card p {
+//   color: grey;
+//   font-size: 12px;
+// }
+
+.btn-apply {
+  background: #6c846c;
   color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: color .2s;
+  display: inline;
+  box-shadow: 2px 2px 4px rgba(10,10,10,.8);
+}
+
+.btn-apply:hover {
+  transition: color .2s;
+  background-color: white;
+  color: #6c846c;
 }
