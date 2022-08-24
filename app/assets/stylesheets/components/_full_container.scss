@@ -4,11 +4,13 @@
 }
 
 .actions {
+  color: black;
   display: flex;
   justify-content: space-between;
 }
 
 .save-share {
+  color: black;
   display: flex;
   justify-content: space-between;
   width: 100px;
@@ -19,7 +21,12 @@
   margin-top: 60px;
 }
 
+.top h1, p {
+  color: black;
+}
+
 .cat-picture {
+  border-radius: 10px;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -36,7 +43,12 @@
   border-bottom: 1px solid lightgrey;
 }
 
+.description p {
+  color: black;
+}
+
 .links {
+  color: #222222;
   display: flex;
   justify-content: space-around;
   margin-top: 24px;
