@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+<div banner="contain-all">
+  <div class="full-container">
+    <div class="top">
+      <h1><%= @cat.name %></h1>
+      <div class="actions">
+        <p>Ratings?</p>
+        <div class="save-share">
+          <p>Save</p>
+          <p>Share</p>
+        </div>
+      </div>
+    </div>
+    <div class="cat-picture">
+    <%# if @cat.photo.attached? %>
+      <%= cl_image_tag @cat.photo.key, height: 300, width: 400, crop: :fill %>
+    </div>
+    <div class="info-container">
+      <div class="cat-infos">
+        <h3><%= @cat.name %></h3>
+        <h5><%= @cat.age %> years old</h5>
+        <p> avatar owner </p>
+      </div>
+    <div class="description">
+      <p><%= @cat.description %></p>
+    </div>
+    <div class="links">
+      <%= link_to "Edit this cat", edit_cat_path(@cat) %>
+      <br>
+      <%= link_to "Delete this cat", cat_path(@cat), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
+      <br>
+      <%= link_to "Back to all cats", cats_path %>
+    </div>
+=======
+<%= link_to "Back to all cats (maybe have it on the navbar?)", cats_path %>
+<%# if @cat.photo.attached? %>
 <div class="co-12 col-sm-6 col-md-4 mb-3 full-container">
   <div class="top">
     <h1><%= @cat.name %></h1>
@@ -10,8 +46,9 @@
     </div>
   </div>
   <div class="cat-picture">
-  <%# if @cat.photo.attached? %>
+  <% if @cat.photo.attached? %>
     <%= cl_image_tag @cat.photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
   </div>
   <div class="info-container">
     <div class="cat-infos">
@@ -21,6 +58,7 @@
     </div>
   <div class="description">
     <p><%= @cat.description %></p>
+    <%= render 'shared/book' %>
   </div>
   <div class="links">
     <%= link_to "Edit this cat", edit_cat_path(@cat) %>
@@ -28,5 +66,6 @@
     <%= link_to "Delete this cat", cat_path(@cat), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
     <br>
     <%= link_to "Back to all cats", cats_path %>
+>>>>>>> bde9c3ca809b420090ce2f360a92c4ca892dea57
   </div>
 </div>
