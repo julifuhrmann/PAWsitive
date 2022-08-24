@@ -1,6 +1,7 @@
 
-<%# if @cat.photo.attached? %>
-<%= cl_image_tag @cat.photo.key, height: 300, width: 400, crop: :fill %>
+<% if @cat.photo.attached? %>
+  <%= cl_image_tag @cat.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
 
 <h1>Name: <%= @cat.name %></h1>
 <h2>Age: <%= @cat.age %></h2>
