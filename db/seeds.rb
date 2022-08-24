@@ -10,11 +10,11 @@ puts "reset db..."
 Cat.destroy_all
 User.destroy_all
 
-puts "Create 30 users..."
+puts "Create 10 users..."
 
 puts "finished!"
 
-30.times do
+10.times do
   user = User.new(
     email: Faker::Internet.email,
     password: Faker::Internet.password
@@ -23,9 +23,9 @@ puts "finished!"
   puts "Creating #{User.count} - #{user.email}"
 end
 
-puts "Create 44 cat entries..."
+puts "Create 20 cat entries..."
 i = 0
-44.times do
+20.times do
   cat = Cat.new(
     name: Faker::Creature::Cat.name,
     age: rand(1..20),
