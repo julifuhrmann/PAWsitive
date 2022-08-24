@@ -1,0 +1,55 @@
+.full-container {
+  width: 900px;
+  margin: auto;
+}
+
+.actions {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.save-share {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.top {
+  padding: 24px 0px 0px;
+  margin-top: 60px;
+}
+
+.top h1, p {
+  color: black;
+}
+
+.cat-picture {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.cat-infos {
+  margin-top: 24px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.description {
+  margin-top: 24px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.description p {
+  color: black;
+}
+
+.links {
+  color: #222222;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 24px;
+}
