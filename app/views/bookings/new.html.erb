@@ -1,9 +1,5 @@
-
-<%= render 'shared/book' %>
-
-
-<%#= simple_form_for [@cat, @booking] do |f| %>
-  <%#= f.input :start_date %>
-  <%#= f.input :end_date %>
-  <%#= f.submit %>
-<%# end %>
+<%= simple_form_for [@cat, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit %>
+<% end %>
