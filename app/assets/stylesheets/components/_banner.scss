@@ -9,9 +9,13 @@
     filter: brightness(50%);
   }
 
-  h1, p {
+  h1 {
     color: white;
     text-shadow:  1px 1px 1px, rgba(10,10,10,.4);
+  }
+
+  p {
+    color: white;
   }
 }
 .container {
