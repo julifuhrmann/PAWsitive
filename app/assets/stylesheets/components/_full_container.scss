@@ -1,0 +1,43 @@
+.full-container {
+  width: 900px;
+  margin: auto;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.save-share {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.top {
+  padding: 24px 0px 0px;
+  margin-top: 60px;
+}
+
+.cat-picture {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.cat-infos {
+  margin-top: 24px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.description {
+  margin-top: 24px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 24px;
+}
