@@ -7,9 +7,9 @@
 <p><%= @cat.description %></p>
 
 <div>
-  <%= link_to "Edit #{@cat.name}", edit_cat_path(@cat) %>
+  <%= link_to "Edit this cat", edit_cat_path(@cat) %>
   <br>
-  <%= link_to "Delete #{@cat.name}", cat_path(@cat), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
+  <%= link_to "Delete this cat", cat_path(@cat), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
   <br>
   <%= link_to "Back to all cats", cats_path %>
 </div>
