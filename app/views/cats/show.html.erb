@@ -1,3 +1,5 @@
+<%= link_to "Back to all cats (maybe have it on the navbar?)", cats_path %>
+<%# if @cat.photo.attached? %>
 <div class="co-12 col-sm-6 col-md-4 mb-3 full-container">
   <div class="top">
     <h1><%= @cat.name %></h1>
@@ -21,6 +23,7 @@
     </div>
   <div class="description">
     <p><%= @cat.description %></p>
+    <%= render 'shared/book' %>
   </div>
   <div class="links">
     <%= link_to "Edit this cat", edit_cat_path(@cat) %>
