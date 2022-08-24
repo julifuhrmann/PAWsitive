@@ -1,15 +1,19 @@
 
-<%# if @cat.photo.attached? %>
-<%= cl_image_tag @cat.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="container">
+  <%= link_to "Back to all cats (maybe have it on the navbar?)", cats_path %>
+  <%# if @cat.photo.attached? %>
+  <div class="container">
+    <%= cl_image_tag @cat.photo.key, height: 300, width: 400, crop: :fill %>
 
-<h1>Name: <%= @cat.name %></h1>
-<h2>Age: <%= @cat.age %></h2>
-<p><%= @cat.description %></p>
-
-<div>
-  <%= link_to "Edit this cat", edit_cat_path(@cat) %>
-  <br>
-  <%= link_to "Delete this cat", cat_path(@cat), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
-  <br>
-  <%= link_to "Back to all cats", cats_path %>
+    <h1>Name: <%= @cat.name %></h1>
+    <h2>Age: <%= @cat.age %></h2>
+    <p><%= @cat.description %></p>
+    <%= render 'shared/book' %>
+    <div>
+      <p>
+        <%= link_to "Edit this cat", edit_cat_path(@cat) %> |
+        <%= link_to "Delete this cat", cat_path(@cat), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
+      </P>
+    </div>
+  </div>
 </div>
