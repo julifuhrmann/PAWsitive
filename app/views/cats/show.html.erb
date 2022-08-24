@@ -16,8 +16,9 @@
   <div class="info-container">
     <div class="cat-infos">
       <h3><%= @cat.name %></h3>
-      <h5><%= @cat.age %> years old</h5>
+      <h4><%= @cat.age %> years old</h4>
       <p> avatar owner </p>
+      <%= link_to "Book this cat", new_cat_booking_path(@cat) %>
     </div>
   <div class="description">
     <p><%= @cat.description %></p>

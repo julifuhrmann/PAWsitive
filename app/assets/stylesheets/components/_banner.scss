@@ -4,24 +4,28 @@
   background-position: center;
   padding: 200px 0;
   margin-top: -15px;
-}
 
-.banner img {
-  filter: brightness(50%);
-}
+  img {
+    filter: brightness(50%);
+  }
 
-.banner h1, p {
-  color: white;
-  text-shadow:  1px 1px 1px, rgba(10,10,10,.4);
+  h1 {
+    color: white;
+    text-shadow:  1px 1px 1px, rgba(10,10,10,.4);
+  }
+
+  p {
+    color: white;
+  }
 }
 
 .container {
   width: 900px;
   margin: auto;
-}
 
-.container h2 {
-  text-align: center;
+  h2 {
+    text-align: center;
+  }
 }
 
 .btn-apply {
