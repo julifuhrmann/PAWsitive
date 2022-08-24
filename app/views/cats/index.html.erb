@@ -21,7 +21,9 @@
       <div class="co-12 col-sm-6 col-md-4 mb-3">
         <%= link_to cat_path(cat), class:"text-decoration-none" do %>
           <div class="card" data-aos="zoom-in">
-            <%= cl_image_tag cat.photo.key, height: 150, width: 150, crop: :fill %>
+            <% if cat.photo.attached? %>
+              <%= cl_image_tag cat.photo.key, height: 150, width: 150, crop: :fill %>
+            <% end %>
             <br>
             <h5 class="text-center" ><%= cat.name %></h5>
           </div>
