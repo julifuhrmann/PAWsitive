@@ -1,6 +1,5 @@
 <div class="container">
   <% if current_user.bookings.where(:cat == @cat).exists? %>
-  <% raise %>
     <%= link_to "Delete Booking", cat_path(@cat), class: "btn btn-danger" %>
   <% else %>
     <%= simple_form_for [@cat, @booking] do |f| %>
