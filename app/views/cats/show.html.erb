@@ -12,8 +12,9 @@
     </div>
   </div>
   <div class="cat-picture">
-  <%# if @cat.photo.attached? %>
+  <% if @cat.photo.attached? %>
     <%= cl_image_tag @cat.photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
   </div>
   <div class="info-container">
     <div class="cat-infos">
