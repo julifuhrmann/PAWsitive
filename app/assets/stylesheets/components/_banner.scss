@@ -1,10 +1,18 @@
 .banner {
+<<<<<<< HEAD
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photo-1511044568932-338cba0ad803.jpg");
+=======
+  background-image: linear-gradient(rgba(0, 0, 0, 0.247),rgba(0, 0, 0, 0.2)) , url("photo-1511044568932-338cba0ad803.jpg");
+>>>>>>> ba671043061ac7324aa9515cd4045770c7581f87
   background-size: cover;
   background-position: center;
   padding: 200px 0;
   margin-top: -15px;
   margin-bottom: 20px;
+}
+
+.banner img {
+  filter: brightness(50%);
 }
 
 .banner h1, p {

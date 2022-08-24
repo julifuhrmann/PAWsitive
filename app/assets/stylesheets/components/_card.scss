@@ -1,17 +1,30 @@
 .cards {
-  display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
   flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
 }
 
 .card {
+<<<<<<< HEAD
   width: 245px;
+=======
+  height: 270px;
+  width: 230px;
+>>>>>>> ba671043061ac7324aa9515cd4045770c7581f87
   border-radius: 4px;
   box-shadow: 1px 1px 3px rgba(10,10,10,.4);
   text-align: center;
   padding: 20px;
   border: 1px solid white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 22px;
+  color: black;
+  font-weight: lighter;
 }
 
 .card img {
