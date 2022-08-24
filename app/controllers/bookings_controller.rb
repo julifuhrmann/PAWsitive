@@ -8,7 +8,10 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @cat = Cat.find(params[:cat_id])
     @booking.cat = @cat
+    @booking.user = current_user
+    @booking.status = 1
     @booking.save
+    flash.alert = "Booking Succesfull :)"
     redirect_to cat_path(@cat)
   end
 

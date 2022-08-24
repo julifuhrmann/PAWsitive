@@ -18,15 +18,18 @@
 
 .top {
   padding: 24px 0px 0px;
-  margin-top: 60px;
-}
 
-.top h1, p {
-  color: black;
+  h1 {
+    color: black;
+  }
+
+  p {
+    color: black;
+  }
 }
 
 .cat-picture {
-  border-radius: 10px;
+  border-radius: 25%;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -44,7 +47,7 @@
 }
 
 .description p {
-  color: black;
+  color: darkgrey;
 }
 
 .links {
