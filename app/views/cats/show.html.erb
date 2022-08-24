@@ -11,5 +11,7 @@
   <br>
   <%= link_to "Delete this cat", cat_path(@cat), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
   <br>
+  <%= link_to "BOOK this cat!", new_cat_booking_path(@cat) %>
+  <br>
   <%= link_to "Back to all cats", cats_path %>
 </div>
