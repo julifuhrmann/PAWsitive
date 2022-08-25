@@ -28,8 +28,8 @@ i = 0
 20.times do
   cat = Cat.new(
     name: Faker::Creature::Cat.name,
-    age: rand(1..20),
-    description: Faker::Creature::Cat.breed,
+    age: rand(1..10),
+    description: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false),
     user: User.all.sample
   )
   cat.photo.attach(io: URI.open(Cloudinary::Search.expression('folder=cats').execute["resources"][i]["url"]),
