@@ -1,10 +1,16 @@
-.actions {
-  color: black;
+.cat-show {
+  overflow: hidden;
+  background: white;
+  box-shadow: 1px 1px 3px rgba(10,10,10,.2);
+  height: 120px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .top {
+  width: 100%;
+  margin: auto;
+  justify-content: center;
   padding: 24px 0px 0px;
 
   h1 {
@@ -17,15 +23,17 @@
 }
 
 .cat-picture {
-  border-radius: 25%;
   height: 100%;
-  width: 100%;
+  width: 120px;
   object-fit: cover;
-  vertical-align: bottom;
 }
 
 .cat-infos {
-  margin-top: 24px;
+  padding: 16px;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: flex-end;
+  // position: relative;
   border-bottom: 1px solid lightgrey;
 }
 

@@ -1,5 +1,6 @@
 .cards {
   width: 100%;
+  margin: auto;
   justify-content: center;
   margin-bottom: 30px;
   flex-wrap: wrap;
@@ -14,7 +15,7 @@
   border-radius: 4px;
   box-shadow: 1px 1px 3px rgba(10,10,10,.4);
   text-align: center;
-  padding: 50px;
+  padding: 20px;
   border: 1px solid white;
   display: inline-flex;
   align-items: center;
