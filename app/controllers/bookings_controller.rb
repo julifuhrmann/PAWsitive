@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: %i[update destroy]
-  before_action :set_user, only: %i[index destroy]
+  before_action :set_user_and_cat, only: %i[index destroy]
 
   def index
     @bookings = Booking.all
@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.status = 1
     @booking.save
-    redirect_to cat_path(@cat), notice: "Booking Succesfull :)"
+    redirect_to bookings_path, notice: "Booking Succesfull :)"
   end
 
   def update
@@ -37,7 +37,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
-  def set_user
+  def set_user_and_cat
     @user = current_user
   end
 

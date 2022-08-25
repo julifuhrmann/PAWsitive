@@ -10,6 +10,10 @@ class CatsController < ApplicationController
     @booking = Booking.new
   end
 
+  def my_cats
+    @cats = Cat.where(user: current_user)
+  end
+
   def new
     @cat = Cat.new
   end
