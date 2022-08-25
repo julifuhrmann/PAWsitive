@@ -1,27 +1,28 @@
-<div class="card-cat">
-  <div class="co-12 col-sm-6 col-md-4 mb-3 container">
-    <div class="top">
-      <h1><%= @cat.name %></h1>
-    </div>
-    <div>
-    <%# if @cat.photo.attached? %>
-      <%= cl_image_tag @cat.photo.key, height: 300, width: 400, crop: :fill, class: "cat-picture" %>
-    </div>
+<div class="co-12 col-sm-6 col-md-4 mb-3 container">
+    <%= link_to "Back to all cats", cats_path %>
+  <div class="wrap-all-content">
+      <%# if @cat.photo.attached? %>
+      <%= cl_image_tag @cat.photo.key %>
     <div class="info-container">
       <div class="cat-infos">
-        <h3><%= @cat.name %></h3>
-        <h4><%= @cat.age %> years old</h4>
-        <%= link_to "Book this cat", new_cat_booking_path(@cat) %>
+        <div class="name-age">
+          <h2><%= @cat.name %></h2>
+          <h5><%= @cat.age %> years old</h5>
+        </div>
+        <div class="link-to-book">
+          <%= link_to "Book this cat", new_cat_booking_path(@cat), class: "another-button" %>
+        </div>
       </div>
-    <div class="description">
-      <p><%= @cat.description %></p>
+      <div class="description">
+        <h5>About <%= @cat.name %></h5>
+        <p><%= @cat.description %></p>
+      </div>
     </div>
-    <div class="links">
-      <%= link_to "Edit this cat", edit_cat_path(@cat) %>
-      <br>
-      <%= link_to "Delete this cat", cat_path(@cat), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
-      <br>
-      <%= link_to "Back to all cats", cats_path %>
-    </div>
+  </div>
+  <div class="links">
+    <%= link_to "Edit this cat", edit_cat_path(@cat) %>
+    <br>
+    <%= link_to "Delete this cat", cat_path(@cat), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
+    <br>
   </div>
 </div>
