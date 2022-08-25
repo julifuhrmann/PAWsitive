@@ -52,3 +52,20 @@
   justify-content: space-around;
   margin-top: 24px;
 }
+
+.btn-apply {
+  background: white;
+  color: #1e1d1d;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: color .2s;
+  display: inline;
+  box-shadow: 2px 2px 4px rgba(10,10,10,.8);
+}
+
+.btn-apply:hover {
+  transition: color .2s;
+  background-color: #dd3864;
+  color: white;
+}

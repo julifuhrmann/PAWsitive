@@ -1,0 +1,36 @@
+.cards {
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card {
+  height: 250px;
+  width: 230px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px rgba(10,10,10,.4);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  img {
+    height: 135px;
+    width: 200px;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+
+  h5 {
+    color: #1e1d1d;
+    font-size: 28px;
+    font-family: 'Rock Salt', cursive;
+  }
+}
