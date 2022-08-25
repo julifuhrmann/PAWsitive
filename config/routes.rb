@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   end
   devise_for :users
   resources :bookings, only: [:index, :destroy]
+  get "my_cats", to: "cats#my_cats", as: :my_cats
 end
