@@ -4,13 +4,6 @@
   justify-content: space-between;
 }
 
-.save-share {
-  color: black;
-  display: flex;
-  justify-content: space-between;
-  width: 100px;
-}
-
 .top {
   padding: 24px 0px 0px;
 
@@ -39,10 +32,10 @@
 .description {
   margin-top: 24px;
   border-bottom: 1px solid lightgrey;
-}
 
-.description p {
-  color: darkgrey;
+  p {
+    color: darkgrey;
+  }
 }
 
 .links {

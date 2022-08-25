@@ -1,13 +1,6 @@
 <div class="co-12 col-sm-6 col-md-4 mb-3 container">
   <div class="top">
     <h1><%= @cat.name %></h1>
-    <div class="actions">
-      <p>Ratings?</p>
-      <div class="save-share">
-        <p>Save</p>
-        <p>Share</p>
-      </div>
-    </div>
   </div>
   <div class="cat-picture">
   <%# if @cat.photo.attached? %>
@@ -17,7 +10,6 @@
     <div class="cat-infos">
       <h3><%= @cat.name %></h3>
       <h4><%= @cat.age %> years old</h4>
-      <p> avatar owner </p>
       <%= link_to "Book this cat", new_cat_booking_path(@cat) %>
     </div>
   <div class="description">
