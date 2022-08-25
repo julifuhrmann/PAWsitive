@@ -1,0 +1,22 @@
+<div class="container">
+<h1>Your lovely cats you will spend time with</h1>
+  <% @user.bookings.each do |booking| %>
+    <% if booking.cat.photo.attached? %>
+      <%= cl_image_tag booking.cat.photo.key, height: 150, width: 150, crop: :fill %>
+    <% end %>
+    <br>
+    <h5 class="text-center">
+      <%= booking.cat.name %>
+      <br>
+      Starts at <%=  booking.start_date %>
+      <br>
+      Ends at <%= booking.end_date %>
+      <br>
+      <%= link_to "Cancel Booking",
+        booking_path(booking),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+        class: "btn btn-danger"
+      %>
+    </h5>
+  <% end %>
+</div>
