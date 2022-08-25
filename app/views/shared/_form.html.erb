@@ -1,7 +1,11 @@
-<%= simple_form_for(cat) do |f| %>
-  <%= f.input :photo, as: :file %>
-  <%= f.input :name %>
-  <%= f.input :age %>
-  <%= f.input :description %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <%= simple_form_for(cat) do |f| %>
+      <%= f.input :photo, as: :file %>
+      <%= f.input :name %>
+      <%= f.input :age %>
+      <%= f.input :description %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
