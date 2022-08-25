@@ -1,4 +1,11 @@
 class BookingsController < ApplicationController
+  before_action :set_booking, only: %i[update destroy]
+  before_action :set_user, only: %i[index destroy]
+
+  def index
+    @bookings = Booking.all
+  end
+
   def new
     @booking = Booking.new
     @cat = Cat.find(params[:cat_id])
@@ -16,12 +23,24 @@ class BookingsController < ApplicationController
   end
 
   def update
-    @booking = Booking.find(params[:id])
     @booking.update(booking_params)
     redirect_to booking_path(@booking)
   end
 
+  def destroy
+    @booking.destroy
+    redirect_to bookings_path(@user), status: :see_other
+  end
+
   private
+
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
+
+  def set_user
+    @user = current_user
+  end
 
   def booking_params
     params.require(:booking).permit(:status, :start_date, :end_date)

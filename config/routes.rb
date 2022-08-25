@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
   devise_for :users
+  resources :bookings, only: [:index, :destroy]
 end
