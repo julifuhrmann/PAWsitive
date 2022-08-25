@@ -11,8 +11,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.status = 1
     @booking.save
-    flash.alert = "Booking Succesfull :)"
-    redirect_to cat_path(@cat)
+    redirect_to cat_path(@cat), notice: "Booking Succesfull :)"
   end
 
   def update
