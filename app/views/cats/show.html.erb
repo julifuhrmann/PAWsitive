@@ -1,8 +1,10 @@
+<div id="back-button">
+  <%= link_to "Back to all cats", cats_path, class: "btn btn-outline-secondary", style: "padding: 3px" %>
+</div>
 <div class="co-12 col-sm-6 col-md-4 mb-3 container">
-    <%= link_to "Back to all cats", cats_path %>
   <div class="wrap-all-content">
       <%# if @cat.photo.attached? %>
-      <%= cl_image_tag @cat.photo.key %>
+      <%= cl_image_tag @cat.photo.key, class: "cat-picture" %>
     <div class="info-container">
       <div class="cat-infos">
         <div class="name-age">
@@ -17,12 +19,10 @@
         <h5>About <%= @cat.name %></h5>
         <p><%= @cat.description %></p>
       </div>
+      <div class="links">
+        <%= link_to "Edit this cat", edit_cat_path(@cat), class: "btn btn-light", style: "padding: 4px" %>
+        <br>
+        <%= link_to "Delete this cat", cat_path(@cat), class: "btn btn-light", style: "padding: 4px", data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
     </div>
-  </div>
-  <div class="links">
-    <%= link_to "Edit this cat", edit_cat_path(@cat) %>
-    <br>
-    <%= link_to "Delete this cat", cat_path(@cat), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
-    <br>
   </div>
 </div>
