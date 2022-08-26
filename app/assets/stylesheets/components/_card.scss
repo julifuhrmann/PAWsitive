@@ -10,6 +10,7 @@
 }
 
 .card {
+  overflow: hidden;
   height: 250px;
   width: 230px;
   border-radius: 4px;
@@ -31,6 +32,6 @@
   h5 {
     color: #1e1d1d;
     font-size: 28px;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Nothing You Could Do', cursive;
   }
 }

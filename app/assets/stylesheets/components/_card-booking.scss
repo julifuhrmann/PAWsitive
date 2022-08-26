@@ -25,7 +25,12 @@
 
 }
 
-.btn-cancel {
+
+.container-booking {
+  display: inline-grid;
+}
+
+.button-cancel {
   background: white;
   font-size: 14px;
   color: #1e1d1d;
@@ -37,12 +42,8 @@
   box-shadow: 1px 1px 2px rgba(10,10,10,.5);
 }
 
-.btn-cancel:hover {
+.button-cancel:hover {
   transition: color .2s;
   background-color: #dd3864;
   color: white;
-}
-
-.container-booking {
-  display: inline-grid;
 }

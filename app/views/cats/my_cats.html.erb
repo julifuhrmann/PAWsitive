@@ -1,18 +1,23 @@
-<div class="p-5 my-cats">
-  <h1 class="my-cats">My Cats</h1>
-  <div class="cards">
+<div class="container p-5">
+  <h2>My Cats</h2>
+    <div class="cards_bookings">
       <% @cats.each do |cat| %>
-        <div class="d-flex align-items-center co-12 col-sm-6 col-md-4 mb-3">
-          <%= link_to cat_path(cat), class:"text-decoration-none" do %>
-            <div class="card" data-aos="zoom-in">
-              <% if cat.photo.attached? %>
-                <%= cl_image_tag cat.photo.key, height: 150, width: 150, crop: :fill %>
-              <% end %>
-              <br>
-              <h5 class="text-center"><%= cat.name %></h5>
+        <div class="card-booking">
+          <% if cat.photo.attached? %>
+              <%= cl_image_tag cat.photo.key, height: 150, width: 150, crop: :fill %>
+            <% end %>
+          <br>
+          <div>
+            <div class="container-booking">
+            <h2 class="text-center" ><%= cat.name %></h2>
+              <%= link_to "Delete cat",
+                my_cats_path(cat),
+                data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+                class: "button-cancel"
+              %>
             </div>
-          <% end %>
-      </div>
-    <% end %>
-  </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
 </div>

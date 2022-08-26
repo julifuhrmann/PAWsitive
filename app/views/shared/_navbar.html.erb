@@ -27,7 +27,7 @@
           <li class="nav-item dropdown mx-3">
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://cdn-icons-png.flaticon.com/512/94/94388.png" />
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to 'Profile', edit_user_registration_path, class: "dropdown-item"  %>
+              <%= link_to 'Settings', edit_user_registration_path, class: "dropdown-item"  %>
               <%= link_to 'My Cats', my_cats_path, class: "dropdown-item"  %>
               <%= link_to "My Bookings", bookings_path(@user), class: "dropdown-item" %>
               <% if user_signed_in? %>

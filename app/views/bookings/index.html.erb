@@ -1,5 +1,5 @@
-<div class="container">
-  <h1>Your lovely cats you will spend time with</h1>
+<div class="container p-5">
+  <h2>My Bookings</h2>
     <div class="cards_bookings">
       <% @user.bookings.each do |booking| %>
         <div class="card-booking">
@@ -7,19 +7,23 @@
             <%= cl_image_tag booking.cat.photo.key, height: 150, width: 150, crop: :fill %>
           <% end %>
           <br>
-          <h5 class="text-center">
-            <%= booking.cat.name %>
-            <br>
-            Starts at <%=  booking.start_date %>
-            <br>
-            Ends at <%= booking.end_date %>
-            <br>
-            <%= link_to "Cancel Booking",
-              booking_path(booking),
-              data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
-              class: "btn btn-danger"
-            %>
-          </h5>
+          <div>
+            <div class="container-booking">
+              <h4>
+                <%= booking.cat.name %>
+              </h4>
+              <p>
+                From <%=  booking.start_date %>
+              <br>
+                To <%= booking.end_date %>
+              </p>
+              <%= link_to "Cancel booking",
+                booking_path(booking),
+                data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+                class: "button-cancel"
+              %>
+            </div>
+          </div>
         </div>
       <% end %>
     </div>
