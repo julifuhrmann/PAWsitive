@@ -1,7 +1,7 @@
 <div class="container p-5 new-booking">
   <%= simple_form_for [@cat, @booking] do |f| %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
+    <%= f.input :start_date, as: :date, html5: true, default: Date.today %>
+    <%= f.input :end_date, as: :date, html5: true %>
     <%= f.submit %>
   <% end %>
 </div>
