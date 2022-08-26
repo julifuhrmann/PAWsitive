@@ -3,8 +3,9 @@
 </div>
 <div class="co-12 col-sm-6 col-md-4 mb-3 container">
   <div class="wrap-all-content">
-      <%# if @cat.photo.attached? %>
-      <%= cl_image_tag @cat.photo.key, class: "cat-picture" %>
+      <% if @cat.photo.attached? %>
+        <%= cl_image_tag @cat.photo.key, height: 300, width: 400, crop: :fill, class: "cat-picture" %>
+      <% end %>
     <div class="info-container">
       <div class="cat-infos">
         <div class="name-age">
