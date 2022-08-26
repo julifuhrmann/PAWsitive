@@ -17,8 +17,12 @@ class BookingsController < ApplicationController
     @booking.cat = @cat
     @booking.user = current_user
     @booking.status = 1
-    @booking.save
-    redirect_to bookings_path, notice: "Booking Succesfull :)"
+    if @booking.valid?
+      @booking.save
+      redirect_to bookings_path, notice: "Booking Succesfull :)"
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def update
